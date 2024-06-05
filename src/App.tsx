@@ -6,10 +6,11 @@ import Layout from "./layouts/layout";
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route element={<Layout />} />
-        <Route path="/" index element={<QuizApp />} />
-      </Routes>
+      <Layout>
+        <Routes>
+          <Route path="/" index element={<QuizApp />} />
+        </Routes>
+      </Layout>
     </BrowserRouter>
   );
 }

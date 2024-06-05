@@ -1,11 +1,11 @@
-import { Outlet } from "react-router-dom";
+import React from "react";
+import "./styles.css";
 
-function Layout() {
+function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="layout__background">
       <div className="layout__star-pattern" />
-      <div className="layout__gradient" />
-      <Outlet />
+      <div className="content">{children}</div>
     </div>
   );
 }
